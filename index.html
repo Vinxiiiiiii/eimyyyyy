@@ -8,6 +8,31 @@
 <body>
 
 
+<audio id="song1">
+  <source src="el_manu.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="song2" loop>
+  <source src="Balisong.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  window.onclick = function () {
+    var song1 = document.getElementById("song1");
+    var song2 = document.getElementById("song2");
+
+    song1.play();
+
+    song1.onended = function () {
+      song2.play();
+    };
+
+    window.onclick = null;
+  }
+</script>
+
+
+
 <img src="Ganda.jpg" width="300">
 <img src="cute.jpg" width="300">
 <body style="background-color: pink; font-family: 'Courgette', 'Grey Qo', cursive;"> 
@@ -24,4 +49,3 @@
 </head>
 </body>
 </html>	
-
